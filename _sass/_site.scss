@@ -37,9 +37,10 @@ body {
 
   &-title {
     margin: 0.3em 0;
-    font-size: 2.25em;
+    font-size: 2em;
     line-height: 1.2em;
     font-weight: 600;
+    text-align: center;
 
     a {
       color: $base-color;
@@ -49,6 +50,12 @@ body {
       }
     }
 
+    p {
+      color: $base-color;
+      font-size: 0.5em;
+      font-weight: 200;
+    }
+
     span {
       color: $oc-gray-5;
     }
@@ -56,13 +63,16 @@ body {
   }
 
   &-nav {
+  	text-align: center;
+  	
     a {
       color: $oc-gray-7;
+      font-weight: 400;
       text-transform: lowercase;
       -webkit-transition: all .2s ease;
          -moz-transition: all .2s ease;
               transition: all .2s ease;
-      margin-right: .3rem;
+      margin-right: .5rem;
 
       &:hover,
       &:focus {
@@ -73,12 +83,19 @@ body {
   }
 }
 
+.header-nav-wrapper {
+  display: inline-flex;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .header-small {
+  color: $oc-gray-7;
   text-align: left;
   margin-bottom: .75rem;
-  font-size: .75rem;
-  font-weight: 600;
-  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: lowercase;
 
   a {
     color: $base-color;
@@ -179,7 +196,7 @@ body {
 
 .list {
   &-post {
-    padding: 4% 2%;
+    padding: 2% 2%;
     
     &:hover {
       background-color: $background-over-color;
@@ -198,7 +215,7 @@ body {
 
     &-title {
       margin-bottom: .3rem;
-      font-size : 1.8rem;
+      font-size : 1.2rem;
       font-weight: 600;
     }
 
@@ -371,6 +388,80 @@ body {
     a {
       color: $base-color;
       margin: 4px;
+    }
+  }
+}
+
+// CUSTOM
+
+/*--------------
+  Author
+  -------------- */
+  .author {
+    display: inline-flex;
+    margin-bottom: 2em;
+
+    a {
+        color: $base-color;
+        font-weight: 400;
+        font-size: 1.1em;
+        &:hover,
+        &:focus {
+          text-decoration: none;
+        }
+      }
+  }
+
+  .avatar {
+    display: inline-block;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    margin: auto;
+    border-radius: 25px;
+    img {
+      max-width: 150%;
+    }
+  }
+
+  .author-description {
+    margin: auto;
+    line-height: 1;
+    margin-left: 0.5em;
+    display: inline-block;
+    align-items: center;
+    p, a {
+      margin: 0px 0px 0px 0px;
+    }
+
+    p {
+      font-weight: 300;
+      font-size: 0.75em;
+      line-height: 1.2;
+    }
+
+    time {
+      font-weight: 300;
+    }
+  }
+
+/*--------------
+  Screen Specific
+  -------------- */
+@media screen and (min-width: 768px) {
+  .sidebar {
+    min-width: 200px;
+    min-height: 200px;
+    margin-left: 25px;
+    float: left;
+    margin-top: 10%;
+    padding: 10px 10px 10px 10px;
+    position: fixed;
+    
+    &-img {
+    	width: 150px;
+    	height: 150px;
     }
   }
 }

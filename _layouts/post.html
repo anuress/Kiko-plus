@@ -1,16 +1,28 @@
 ---
 layout: default
 ---
-<header>
+<!-- <header>
   <div class="header-small">
     <a href="{{site.url}}{{site.baseurl}}">{{ site.name }}</a>
   </div>
-</header>
+</header> -->
+<div class="author">
+  <div class="avatar">
+    <img src="{{ site.avatar }}" />
+  </div>
+  <div class="author-description">
+    <div>
+      <a href="{{ site.url }}{{ site.baseurl }}">{{ site.name }}</a>
+      <p>{{ site.random-text }}</p>
+      <p><time>{{ page.date | date_to_string }}</time></p>
+    </div>
+  </div>
+</div>
 <div class="post">
   <div class="post-title">{{ page.title }}</div>
-  <span class="post-date">
-    <time>{{ page.date | date_to_string }}</time>
-  </span>
+  <!-- <span class="post-date"> -->
+   <!--  <p>{{ page.date | date_to_string }}</p> -->
+  <!-- </span> -->
   <div class="post-tag">
     <ul>
       {% for tag in page.tags %}
@@ -27,11 +39,11 @@ layout: default
   {{ content }}
 
   <!-- Disqus -->
-  {% if page.comments != false and site.disqus.id %}
+  <!-- {% if page.comments != false and site.disqus.id %}
   <div class="post-disqus">
       <section id="disqus_thread"></section>
       {% include disqus.html %}
   </div>
-  {% endif %}
+  {% endif %} -->
 
 </div>

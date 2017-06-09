@@ -5,15 +5,18 @@ layout: default
 <header class="header">
   <div class="header-title">
     <a href="{{ site.url }}{{ site.baseurl }}">{{ site.name }}</a>
+    <p>{{ site.subname }}</p>
   </div>
   <nav class="header-nav">
+    <div class="header-nav-wrapper">
     {% for nav in site.nav %}
-    {% if nav.url contains 'http://' or nav.url contains 'https://' %}
-    <a href="{{ nav.url }}">{{ nav.name }}</a>
-    {% else %}
-    <a href="{{ nav.url | prepend: site.baseurl }}">{{ nav.name }}</a>
-    {% endif %}
-    {% endfor %}
+		{% if nav.url contains 'http://' or nav.url contains 'https://' %}
+		<a href="{{ nav.url }}">{{ nav.name }}</a>
+		{% else %}
+		<a href="{{ nav.url | prepend: site.baseurl }}">{{ nav.name }}</a>
+		{% endif %}
+		{% endfor %}
+    </div>
   </nav>
 </header>
 
